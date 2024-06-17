@@ -1,0 +1,70 @@
+.game-board-page {
+  background-image: url("https://t3.ftcdn.net/jpg/01/92/56/92/360_F_192569231_SEoh2RBLTRvKifEIuPTHR6LlSES4rtVA.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-board-heading {
+  font-family: "Lucida Sans", sans-serif;
+  text-align: center;
+  color: rgb(128, 83, 0);
+  text-decoration: underline;
+}
+
+.center-board-container {
+  background-color: rgb(3, 0, 0);
+  border-radius: 20px;
+  padding: 5px 10px 20px 10px;
+}
+
+.board-title {
+  color: azure;
+  font-family: "Roboto Slab", serif;
+  font-size: 19px;
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-status-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .status-heading {
+    display: none;
+  }
+}
+
+.status-icon {
+  margin-top: 7px;
+}
+
+.user-score {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.timer-value {
+  background-color: aqua;
+  box-shadow: 1px 2px 3px 1px #384593;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.card-image-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center;
+}

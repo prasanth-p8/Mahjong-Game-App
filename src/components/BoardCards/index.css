@@ -1,0 +1,16 @@
+.card-image {
+  width: 60px;
+  border-radius: 10px;
+}
+
+.card-item {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}

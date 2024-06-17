@@ -1,0 +1,67 @@
+.status-bar-container {
+  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718641220/gameover_page_fd5sgs.jpg");
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Roboto Slab", serif;
+  background-size: cover;
+}
+
+.game-over-text {
+  text-align: center;
+  width: 340px;
+}
+
+.status-container {
+  margin-top: 20px;
+  padding: 10px;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718641747/game_over_center_frame_bcforc.png");
+}
+
+.result-image-container {
+  text-align: center;
+  min-height: 230px;
+}
+
+.result-image {
+  width: 270px;
+}
+
+.result-heading {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.time-taken {
+  font-size: 24px;
+}
+
+.game-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-button {
+  padding: 10px 20px 10px 20px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(17, 199, 0, 0.8);
+  color: rgb(219, 219, 219);
+  font-size: 14px;
+  box-shadow: 1px 2px 3px 2px #349343;
+  font-family: "Rubik Bubbles", system-ui;
+}
+
+.quit-game {
+  background-color: rgba(199, 0, 0, 0.8);
+  box-shadow: 1px 2px 3px 2px #7a1401;
+}
