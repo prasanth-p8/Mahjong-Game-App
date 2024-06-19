@@ -1,9 +1,21 @@
 .game-board-page {
-  background-image: url("https://t3.ftcdn.net/jpg/01/92/56/92/360_F_192569231_SEoh2RBLTRvKifEIuPTHR6LlSES4rtVA.jpg");
+  background-image: url("https://img.freepik.com/free-photo/cute-cartoon-background-children_23-2150169923.jpg");
   background-position: center;
   background-size: cover;
   min-height: 100vh;
   padding: 20px;
+}
+
+@media (min-width: 501px) {
+  .game-board-page {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 801px) {
+  .game-board-page {
+    padding: 60px 120px;
+  }
 }
 
 .game-board-heading {
@@ -13,16 +25,34 @@
   text-decoration: underline;
 }
 
-.center-board-container {
-  background-color: rgb(3, 0, 0);
-  border-radius: 20px;
-  padding: 5px 10px 20px 10px;
+@media (min-width: 501px) {
+  .game-board-heading {
+    font-size: 40px;
+  }
 }
 
-.board-title {
-  color: azure;
-  font-family: "Roboto Slab", serif;
-  font-size: 19px;
+@media (min-width: 801px) {
+  .game-board-heading {
+    font-size: 50px;
+  }
+}
+
+.center-board-container {
+  background-color: rgb(3, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 2px 10px 40px 10px;
+}
+
+@media (min-width: 501px) {
+  .center-board-container {
+    padding: 5px 30px 50px 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .center-board-container {
+    padding: 7px 40px 60px 40px;
+  }
 }
 
 .user-status {
@@ -31,24 +61,77 @@
   justify-content: space-between;
 }
 
+.board-title {
+  color: azure;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 25px;
+}
+
+.player-name {
+  font-size: 24px;
+}
+
+@media (min-width: 501px) {
+  .player-name {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 801px) {
+  .player-name {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 501px) {
+  .welcome-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .welcome-text {
+    font-size: 24px;
+  }
+}
+
 .heading-status-container {
   display: flex;
   align-items: center;
 }
 
-@media (max-width: 400px) {
-  .status-heading {
-    display: none;
+.status-icon {
+  font-size: 50px;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+
+@media (min-width: 501px) {
+  .status-icon {
+    font-size: 60px;
   }
 }
 
-.status-icon {
-  margin-top: 7px;
+@media (min-width: 901px) {
+  .status-icon {
+    margin-right: 10px;
+  }
 }
 
 .user-score {
   font-size: 40px;
-  margin-left: 10px;
+}
+
+@media (min-width: 501px) {
+  .user-score {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 801px) {
+  .user-score {
+    font-size: 60px;
+  }
 }
 
 .timer-value {
@@ -59,6 +142,31 @@
   margin-left: 10px;
   padding: 8px 16px;
   border-radius: 20px;
+}
+
+@media (min-width: 501px) {
+  .timer-value {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .timer-value {
+    font-size: 35px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .status-heading {
+    display: none;
+  }
+}
+
+.status-heading {
+  font-size: 50px;
+  margin-right: 5px;
 }
 
 .card-image-list {

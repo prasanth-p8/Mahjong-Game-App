@@ -1,0 +1,176 @@
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-button {
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(17, 199, 0, 0.8);
+  color: rgb(219, 219, 219);
+  font-size: 14px;
+  box-shadow: 1px 2px 3px 2px #349343;
+  font-family: "Rubik Bubbles", system-ui;
+}
+
+@media (min-width: 501px) {
+  .game-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 801px) {
+  .game-button {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
+}
+
+.popup-content {
+  height: 200px;
+  margin: auto;
+  background-color: #020e31;
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 2px 3px 1px #dfe2fd;
+  border-radius: 20px;
+}
+
+@media (min-width: 501px) {
+  .popup-content {
+    height: 250px;
+    padding: 10px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 801px) {
+  .popup-content {
+    height: 300px;
+    padding: 15px;
+    width: 450px;
+  }
+}
+
+.pop-heading {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 501px) {
+  .pop-heading {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 801px) {
+  .pop-heading {
+    font-size: 50px;
+  }
+}
+
+.quit-heading {
+  color: rgb(230, 0, 0);
+}
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lucida Sans", sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.confirmation-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+}
+
+@media (min-width: 501px) {
+  .confirmation-button-container {
+    width: 300px;
+  }
+}
+
+@media (min-width: 801px) {
+  .confirmation-button-container {
+    width: 400px;
+  }
+}
+
+.confirmation-msg {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffb035;
+}
+
+@media (min-width: 501px) {
+  .confirmation-msg {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 801px) {
+  .confirmation-msg {
+    font-size: 34px;
+  }
+}
+
+.confirmation-button {
+  border-radius: 10px;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(17, 199, 0, 0.8);
+  box-shadow: 1px 2px 3px 2px #344a93;
+  color: rgb(219, 219, 219);
+}
+
+@media (min-width: 501px) {
+  .confirmation-button {
+    border-radius: 12px;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .confirmation-button {
+    border-radius: 15px;
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .md {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .lg {
+    display: none;
+  }
+}
+.quit-game {
+  background-color: rgba(199, 0, 0, 0.8);
+  box-shadow: 1px 2px 3px 2px #7a1401;
+}
+
+.lg {
+  font-size: 24px;
+  font-weight: 600;
+}

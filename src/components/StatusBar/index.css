@@ -1,67 +1,173 @@
 .status-bar-container {
-  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718641220/gameover_page_fd5sgs.jpg");
+  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718792415/game_over_page_bg.jpg");
   padding: 20px;
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   background-size: cover;
 }
 
+@media (min-width: 401px) {
+  .status-bar-container {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 801px) {
+  .status-bar-container {
+    padding: 60px;
+  }
+}
+
 .game-over-text {
-  text-align: center;
-  width: 340px;
+  width: 100%;
 }
 
 .status-container {
   margin-top: 20px;
-  padding: 10px;
-  min-height: 90vh;
+  padding: 20px;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718641747/game_over_center_frame_bcforc.png");
+  align-items: flex-end;
+  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718795260/losing-image-bg_em4oyr.png");
 }
 
-.result-image-container {
-  text-align: center;
-  min-height: 230px;
+.winning-bg {
+  background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718795260/winning-image-bg_ebtjpo.png");
 }
 
-.result-image {
-  width: 270px;
+@media (min-width: 501px) {
+  .status-container {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .status-container {
+    margin-top: 40px;
+    padding: 115px;
+    border-radius: 40px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .status-container {
+    margin: 18%;
+  }
 }
 
 .result-heading {
-  margin-top: 0;
-  font-size: 24px;
+  margin: 0;
+  font-size: 20px;
+  color: rgb(223, 70, 0);
+}
+
+@media (min-width: 501px) {
+  .result-heading {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 801px) {
+  .result-heading {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .result-heading {
+    font-size: 35px;
+  }
+}
+
+.status-content-container {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 501px) {
+  .status-content-container {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 801px) {
+  .status-content-container {
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1001px) {
+  .status-content-container {
+    min-width: 500px;
+    margin-bottom: 0;
+  }
+}
+
+.each-status-container {
+  display: flex;
+  align-items: center;
+  font-family: "Archivo Black", sans-serif;
+  margin-top: 10px;
+}
+
+.status-title {
+  color: rgb(122, 56, 2);
+  margin: 0;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+@media (min-width: 501px) {
+  .status-title {
+    font-size: 35px;
+  }
+}
+@media (min-width: 801px) {
+  .status-title {
+    font-size: 45px;
+  }
+}
+
+.player-score {
+  color: rgb(223, 0, 0);
+  margin: 0;
+  font-size: 50px;
+}
+.winning-color {
+  color: rgb(62 203 39);
+}
+
+@media (min-width: 501px) {
+  .player-score {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 801px) {
+  .player-score {
+    font-size: 70px;
+  }
 }
 
 .time-taken {
+  color: rgb(122, 56, 2);
+  font-family: "Archivo Black", sans-serif;
   font-size: 24px;
 }
 
-.game-button-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+@media (min-width: 501px) {
+  .time-taken {
+    font-size: 26px;
+  }
 }
 
-.game-button {
-  padding: 10px 20px 10px 20px;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  background-color: rgb(17, 199, 0, 0.8);
-  color: rgb(219, 219, 219);
-  font-size: 14px;
-  box-shadow: 1px 2px 3px 2px #349343;
-  font-family: "Rubik Bubbles", system-ui;
-}
-
-.quit-game {
-  background-color: rgba(199, 0, 0, 0.8);
-  box-shadow: 1px 2px 3px 2px #7a1401;
+@media (min-width: 801px) {
+  .time-taken {
+    font-size: 28px;
+  }
 }

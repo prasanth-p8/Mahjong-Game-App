@@ -1,3 +1,4 @@
+import PopupButton from "../PopupButton";
 import "./index.css";
 
 function StatusBar(props) {
@@ -5,54 +6,42 @@ function StatusBar(props) {
 
   const userName = localStorage.getItem("username");
 
-  const playAgain = () => {
-    resetGame();
-  };
-
-  const exitGame = () => {
+  const quitGame = () => {
     deleteUser();
   };
 
-  const resultImage =
-    score > 0
-      ? "https://res.cloudinary.com/dlefoxknm/image/upload/v1718643507/image_for_positive_score_dg3mhu.png"
-      : "https://res.cloudinary.com/dlefoxknm/image/upload/v1718643507/image_for_negative_score_ieeu1y.png";
+  const restart = () => {
+    resetGame();
+  };
+
+  let user = userName[0].toUpperCase() + userName.substring(1);
 
   const resultHeading =
     score > 0
-      ? `Congratutions ${userName}. You are a Champion!!!`
-      : `Don't Worry Champ. Keep playing ${userName}`;
+      ? `Congratutions ${user}. You are a Champion!!!`
+      : `Don't Worry Champ. Keep playing ${user}`;
+
+  const winningBg = score > 0 ? "winning-bg" : "";
+  const scoreColor = score > 0 ? "winning-color" : "";
 
   return (
     <div className="status-bar-container">
       <img
-        src="https://res.cloudinary.com/dlefoxknm/image/upload/v1718642145/game_over_text_image_ib7egj.png"
+        src="https://res.cloudinary.com/dlefoxknm/image/upload/v1718792641/game_over-text_epyxyc.png"
         alt="game over text"
         className="game-over-text"
       />
-      <div className="status-container">
-        <div>
-          <div className="result-image-container">
-            <img
-              src={resultImage}
-              alt="result status"
-              className="result-image"
-            />
-          </div>
+      <div className={`status-container ${winningBg}`}>
+        <div className="status-content-container">
           <h1 className="result-heading">{resultHeading}</h1>
-
-          <h1>Score: {score}</h1>
-          <h1 className="time-taken">
-            Time Taken: {min}m :{sec}s
-          </h1>
-          <div className="game-button-container">
-            <button className="game-button" onClick={playAgain}>
-              Play Again
-            </button>
-            <button className="game-button quit-game" onClick={exitGame}>
-              Quit Game
-            </button>
+          <div className="each-status-container">
+            <h1 className="status-title">Your Score:</h1>
+            <h1 className={`player-score ${scoreColor}`}>{score}</h1>
           </div>
+          <h1 className="time-taken">
+            Time Taken: {min}m {sec}s
+          </h1>
+          <PopupButton closeGame={quitGame} playAgain={restart} />
         </div>
       </div>
     </div>

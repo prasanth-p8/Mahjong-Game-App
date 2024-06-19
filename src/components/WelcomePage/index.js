@@ -5,22 +5,31 @@ import "./index.css";
 const getUserName = () => {
   return localStorage.getItem("username");
 };
+
+// getting user name from local storage by getUserName() function.
 const user = getUserName();
 
 function WelcomePage(props) {
+  // gameCards data from App component.
   const { gameCards } = props;
+  // userName is used to store the user name in the localStorage.
   const [userName, setUserName] = useState(user === null ? "" : user);
+  // userInput keep track of user input in input text element.
   const [userInput, setUserInput] = useState("");
+  // showError will display an error if user try to start game without their name.
   const [showError, setShowError] = useState(false);
 
+  // displayWelcomePage is displayed to the user if not started the game.
   const displayWelcomePage = userName === "";
+
+  // changeInput event handler will change the user input if any data is entered.
   const changeInput = (event) => {
     setShowError(false);
     setUserInput(event.target.value);
   };
 
   const startTheGame = () => {
-    if (userInput !== "") {
+    if (userInput.trim() !== "") {
       localStorage.setItem("username", userInput);
       setUserName(userInput);
     } else {
@@ -30,7 +39,7 @@ function WelcomePage(props) {
 
   const enterPressed = (event) => {
     if (event.key === "Enter") {
-      if (userInput !== "") {
+      if (userInput.trim() !== "") {
         localStorage.setItem("username", userInput);
         setUserName(userInput);
       } else {
@@ -61,10 +70,13 @@ function WelcomePage(props) {
                 className="user-input"
                 onKeyDown={enterPressed}
               />
+              {showError && (
+                <p className="error-msg">*Enter your name to start the game</p>
+              )}
             </div>
-            {showError && <p className="error-msg">*Enter your name to star</p>}
+
             <button onClick={startTheGame} className="play-button">
-              Play
+              Start Game
             </button>
           </div>
           <div className="instruction-container">

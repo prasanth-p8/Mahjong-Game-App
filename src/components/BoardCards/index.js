@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./index.css";
 
 function BoardCards(props) {
@@ -5,11 +6,22 @@ function BoardCards(props) {
   const { id, imgName, imgUrl, isOpened } = eachCard;
 
   const openCard = () => {
-    openGameCard(id);
+    if (!isOpened) {
+      openGameCard(id);
+    }
   };
 
+  useEffect(() => {
+    if (isOpened) {
+      const flipSound = new Audio("./Audio_Tracks/flipcard-sound.mp3");
+      flipSound.play();
+    }
+  }, [isOpened]);
+
+  const flipName = isOpened ? "flip" : "";
+
   return (
-    <li className="card-item" onClick={openCard}>
+    <li className={`card-item ${flipName}`} onClick={openCard}>
       {isOpened && <img src={imgUrl} alt={imgName} className="card-image" />}
     </li>
   );

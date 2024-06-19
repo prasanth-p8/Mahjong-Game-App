@@ -2,6 +2,7 @@ import "./App.css";
 import WeclomePage from "./components/WelcomePage";
 
 function App() {
+  // cards details with an array of object in gameCards variable.
   const gameCards = [
     {
       id: 0,
@@ -176,6 +177,7 @@ function App() {
     },
   ];
 
+  // card details array is shared to WelcomePage components through props data
   return <WeclomePage gameCards={gameCards} />;
 }
 

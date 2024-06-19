@@ -1,15 +1,45 @@
 .welcome-page-container {
-  background-image: url("https://t3.ftcdn.net/jpg/02/14/89/20/360_F_214892077_54puGOBuvsRYsVYbvmGsMODpCmU8daCZ.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/location-with-wooden-bridges-ai-generate_250484-7529.jpg?w=1100");
   background-size: cover;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   max-width: 400px;
+}
+
+@media (min-width: 401px) {
+  .welcome-page-container {
+    max-width: 800px;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .welcome-page-container {
+    max-width: 100%;
+    padding: 40px;
+  }
 }
 
 .game-heading {
   font-family: "Lucida Sans", sans-serif;
   text-align: center;
   color: aliceblue;
+}
+
+@media (min-width: 501px) {
+  .game-heading {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 801px) {
+  .game-heading {
+    font-size: 45px;
+    color: #ffaa00;
+  }
 }
 
 .game-login-container {
@@ -20,6 +50,23 @@
   box-shadow: 1px 2px 3px 2px #312203;
   padding-top: 50px;
   margin-bottom: 20px;
+  min-width: 100%;
+}
+
+@media (min-width: 501px) {
+  .game-login-container {
+    min-width: 480px;
+    margin-bottom: 30px;
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 801px) {
+  .game-login-container {
+    min-width: 630px;
+    margin-bottom: 40px;
+    min-height: 320px;
+  }
 }
 
 .user-container {
@@ -34,6 +81,20 @@
   font-weight: 600;
 }
 
+@media (min-width: 501px) {
+  .label-content {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 801px) {
+  .label-content {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+}
+
 .user-input {
   padding: 20px;
   border-radius: 10px;
@@ -45,13 +106,42 @@
   cursor: pointer;
 }
 
+@media (min-width: 501px) {
+  .user-input {
+    font-size: 24px;
+    width: 350px;
+  }
+}
+
+@media (min-width: 801px) {
+  .user-input {
+    font-size: 28px;
+    width: 450px;
+  }
+}
+
 .error-msg {
   font-size: 18px;
   font-weight: 600;
+  width: 290px;
+  text-align: left;
   margin-top: 5px;
-  width: 280px;
   color: rgb(255, 0, 43);
   margin-bottom: 0;
+}
+
+@media (min-width: 501px) {
+  .error-msg {
+    font-size: 23px;
+    width: 390px;
+  }
+}
+
+@media (min-width: 801px) {
+  .error-msg {
+    font-size: 28px;
+    width: 490px;
+  }
 }
 
 .play-button {
@@ -66,6 +156,20 @@
   background-color: rgb(0, 255, 170);
 }
 
+@media (min-width: 501px) {
+  .play-button {
+    padding: 20px 40px 20px 40px;
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 801px) {
+  .play-button {
+    font-size: 28px;
+    padding: 25px 50px 25px 50px;
+  }
+}
+
 .instruction-container {
   background-image: url("https://res.cloudinary.com/dlefoxknm/image/upload/v1718649550/instruction_board_qmtnq2.jpg");
   background-size: cover;
@@ -73,12 +177,42 @@
   color: aliceblue;
   font-family: "Roboto Slab", serif;
   padding: 5px;
+  min-width: 100%;
+}
+
+@media (min-width: 501px) {
+  .instruction-container {
+    padding: 20px;
+    font-size: 20px;
+    min-width: 440px;
+  }
+}
+
+@media (min-width: 801px) {
+  .instruction-container {
+    font-size: 24px;
+    padding: 0px 30px 0px 30px;
+    max-width: 575px;
+  }
 }
 
 .instruction-list {
   padding-left: 25px;
   line-height: 1.8;
   font-size: 17px;
-
   list-style: roman;
+}
+
+@media (min-width: 501px) {
+  .instruction-list {
+    padding-left: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .instruction-list {
+    font-size: 23px;
+    padding-left: 45px;
+  }
 }
