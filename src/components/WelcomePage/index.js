@@ -28,15 +28,18 @@ function WelcomePage(props) {
     setUserInput(event.target.value);
   };
 
+  // startTheGame will check the input element is empty or not, if value provided it will start the game.
   const startTheGame = () => {
     if (userInput.trim() !== "") {
       localStorage.setItem("username", userInput);
       setUserName(userInput);
     } else {
+      // if value is empty it will show the error message to the user.
       setShowError(true);
     }
   };
 
+  // same function like "startTheGame" but triggered when "Enter" key pressed.
   const enterPressed = (event) => {
     if (event.key === "Enter") {
       if (userInput.trim() !== "") {
@@ -48,6 +51,7 @@ function WelcomePage(props) {
     }
   };
 
+  // quitGame will clear the user name in the localStorage and reset input values.
   const quitGame = () => {
     localStorage.removeItem("username");
     setUserName("");
@@ -96,7 +100,7 @@ function WelcomePage(props) {
           </div>
         </div>
       )}
-      {!displayWelcomePage && (
+      {!displayWelcomePage && ( //if user entered their name it will display GameApp page using conditional rendering.
         <GameApp gameCards={gameCards} quitGame={quitGame} />
       )}
     </div>

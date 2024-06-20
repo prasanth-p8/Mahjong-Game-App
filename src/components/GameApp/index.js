@@ -123,12 +123,14 @@ function GameApp(props) {
   };
 
   // game will be finished after opening all card depending on the gameFinished value.
-  const gameFinished = openedCard.length === mahjongCard.length;
+  const gameFinished = openedCard.length === 2;
 
   if (gameFinished) {
     // if user completes the game game-over-sound will be played.
     playSound("./Audio_Tracks/game-over-sound.mp3");
   }
+
+  console.log(mahjongCard);
 
   // resetGame function will be excuted will user tries to restart the game
   const resetGame = () => {
@@ -147,10 +149,11 @@ function GameApp(props) {
   // deleteUser function will be triggered once the user quit the game.
   const deleteUser = () => {
     quitGame();
-    // game-quit-sound will be played once the game exited.
+    // game-quit-sound will be played once the game exited by user.
     playSound("/Audio_Tracks/game-quit-sound.mp3");
   };
 
+  // this effect is used to update the timer value for each second.
   useEffect(() => {
     let timerId;
     if (!gameFinished) {
@@ -158,20 +161,22 @@ function GameApp(props) {
         setTimeInSec((prevState) => prevState + 1);
       }, 1000);
     }
+
+    // clean up function used to stop the timer value when component unmounted.
     return () => {
       clearInterval(timerId);
     };
-  }, [gameFinished]);
+  }, [gameFinished]); // gameFinished is used in dependence array to keep track for this effect.
 
+  // if condition check if timeInSec is greater than equal to 59 then updates the timeInMin by 1 and reset timeInSec to 0.
   if (timeInSec >= 59) {
     setTimeInMin((prevState) => prevState + 1);
     setTimeInSec(0);
   }
 
+  // minsToDisplay and secToDisplay used to update timer value if less than 9 then value is concatenate with 0 or else value is displayed.
   const minsToDisplay = timeInMin > 9 ? timeInMin : `0${timeInMin}`;
   const secToDisplay = timeInSec > 9 ? timeInSec : `0${timeInSec}`;
-
-  console.log(minsToDisplay, secToDisplay);
 
   return (
     <div>
@@ -188,7 +193,6 @@ function GameApp(props) {
             <div className="heading-status-container">
               <FcAlarmClock className="status-icon" />
               <h1 className="status-heading">Timer:</h1>
-
               <span className="timer-value">
                 {minsToDisplay}:{secToDisplay}
               </span>

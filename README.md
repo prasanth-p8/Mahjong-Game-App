@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Mahjong Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Mahjong matching game built with React. Players flip cards to find matching pairs. The game keeps track of the score and time, and includes sounds for different actions like flipping cards, matching, unmatching, starting, ending and exiting the game.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Rules](#rules)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Development](#development)
+  - [File Structure](#file-structure)
+  - [Key Functions](#key-functions)
+  - [Adding Sounds](#adding-sounds)
+  - [Example of Adding Sound](#example-of-adding-sound)
+- [Contributing](#contributing)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live demo of the application: [Live Demo](https://prasanth-mahjong-game.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- User can start the game after entering their `name`.
+- Card matching game with `Mahjong tiles`.
+- Game having `Play Again` button to restart the game.
+- Game having `Quit Game` button to exit from the game.
+- Score tracking when matching and unmatching the cards.
+- Timer tracking to display the result after game completion.
+- Audio sounds for card flip, match, unmatch, game start, game end and game quit.
+- Responsive design for various devices (desktop, tablet, mobile).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Rules
 
-### `npm run build`
+1. Click on any tile to turn it over and see what's there.
+2. Reveal matching tiles on the board in a timely manner.
+3. If two tiles match, score is awarded with one (1) point.
+4. If two tiles don't match, score is deducted by one (1) point.
+5. Current score & timer are displayed at the top of the board.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Hooks
+- CSS for styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Make sure you have the following installed on your local development machine:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (>= 14)
+- npm (>= 6)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git https://github.com/prasanth-p8/Mahjong-Game-App
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate to the project directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+    cd Mahjong-Game-App-main
+   ```
 
-### Code Splitting
+3. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Start the development server:
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Open your browser and navigate to `http://localhost:3000`.
 
-### Advanced Configuration
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### File Structure
 
-### Deployment
+1. public/: Contains static assets like images (./Background_Images) and sounds (./Audio_Tracks).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   1. flipcard-sound.mp3: Sound for card flip.
+   2. match_sound.mp3: Sound for matching cards.
+   3. unmatch_sound.mp3: Sound for unmatching cards.
+   4. game-start-sound.mp3: Sound for starting the game.
+   5. game-over-sound.mp3: Sound for ending the game.
+   6. game-quit-sound.mp3: Sound for quitting the game.
 
-### `npm run build` fails to minify
+2. src/: Contains React components and main logic of the application.
+   1. components/: Contains individual component files.
+      1. BoardCards.js: Displays the game cards.
+      2. GameApp.js: Display the game board.
+      3. PopupButton.js: Contains the popup button logic.
+      4. StatusBar.js: Displays the status bar with score and timer.
+      5. WelcomePage.js: Displays the Welcome Message to start the game.
+   2. App.js: Main application component
+   3. index.js: Entry point for the React application
+   4. index.css: Global Styles for the application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Key Functions
+
+1.  shuffleCard(arr): Shuffles the array of game cards.
+2.  openGameCard(id): Handles logic for when a game card is clicked.
+3.  resetGame(): Resets the game state.
+4.  deleteUser(): Handles quitting the game.
+5.  getUserName(): Get username from localStoarge.
+
+### Adding Sounds
+
+To add or change sounds, place your audio files in the `public/Audio_Tracks` directory and update the paths in the `GameApp` component accordingly.
+
+### Example of Adding Sound
+
+In `GameApp.js`, sounds are played using the `playSound` function:
+
+```javascript
+const playSound = (soundPath) => {
+  const sound = new Audio(soundPath);
+  sound.play().catch((error) => {
+    console.error("Error playing sound:", error);
+  });
+};
+```
+
+> [!NOTE]
+> Ensure sounds are triggered by user actions to comply with browser autoplay policies.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features to suggest.

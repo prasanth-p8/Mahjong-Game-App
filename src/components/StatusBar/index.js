@@ -2,25 +2,32 @@ import PopupButton from "../PopupButton";
 import "./index.css";
 
 function StatusBar(props) {
+  // necessary data are destructed from the component sharing through props.
   const { score, min, sec, resetGame, deleteUser } = props;
 
+  // getting user name from the local storage and displayed to user.
   const userName = localStorage.getItem("username");
 
+  // quitGame triggered from PopupButton component and triggers exit function.
   const quitGame = () => {
     deleteUser();
   };
 
+  // reset function triggered from PopupButton component and triggers restart function.
   const restart = () => {
     resetGame();
   };
 
+  // user variable stores username with capitalizing the first letter and adding remaining letters with substring.
   let user = userName[0].toUpperCase() + userName.substring(1);
 
+  // using ternary operator condition checked and respective value stored in resultHeading.
   const resultHeading =
     score > 0
       ? `Congratutions ${user}. You are a Champion!!!`
       : `Don't Worry Champ. Keep playing ${user}`;
 
+  // styling applied with className adding to the element based on the user score.
   const winningBg = score > 0 ? "winning-bg" : "";
   const scoreColor = score > 0 ? "winning-color" : "";
 

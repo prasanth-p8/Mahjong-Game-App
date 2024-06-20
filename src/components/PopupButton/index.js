@@ -10,13 +10,15 @@ import "./index.css";
 const PopupButton = (props) => {
   const { closeGame, playAgain } = props;
 
+  // exitGame function will triggered when user clicks the popup button "Yes".
   const exitGame = () => {
     closeGame();
   };
 
+  // restart function will triggered when user clicks the popup button 'Yes'.
   const restart = (closePopup) => {
     playAgain();
-    closePopup();
+    closePopup(); // closePopup function is used to close popup after restarting the game.
   };
   return (
     <div className="popup-container">
