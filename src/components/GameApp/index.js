@@ -123,7 +123,7 @@ function GameApp(props) {
   };
 
   // game will be finished after opening all card depending on the gameFinished value.
-  const gameFinished = openedCard.length === 2;
+  const gameFinished = openedCard.length === mahjongCard.length;
 
   if (gameFinished) {
     // if user completes the game game-over-sound will be played.
