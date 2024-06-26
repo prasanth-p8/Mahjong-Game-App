@@ -62,13 +62,13 @@ Make sure you have the following installed on your local development machine:
 1. Clone the repository:
 
    ```bash
-   git https://github.com/prasanth-p8/Mahjong-Game-App
+   git clone https://github.com/prasanth-p8/Mahjong-Game-App
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-    cd Mahjong-Game-App-main
+    cd Mahjong-Game-App
    ```
 
 3. Install dependencies:
